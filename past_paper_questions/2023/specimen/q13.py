@@ -1,11 +1,5 @@
+import helper as helper
 import random
-
-def load_data(filename):
-  all_data = []
-  file = open(filename, 'r')
-  for data in file:
-    all_data.append(data.replace('\n', ''))
-  return all_data
 
 def populate(qty, collection):
   data = []
@@ -22,8 +16,8 @@ def generate_marks(class_size, no_subjects):
     all_marks.append(marks)
   return all_marks
 
-all_nms = load_data('data/names.txt')
-all_sbj = load_data('data/caie_subjects.txt')
+all_nms = helper.load_to_array('names.txt')
+all_sbj = helper.load_to_array('caie_subjects.txt')
 
 ClassSize = 6                                       # >> size of class <<
 SubjectNo = 8                                       # >> number of subjects <<
